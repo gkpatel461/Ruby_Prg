@@ -1,39 +1,28 @@
 class Pangram
   def self.pangram?(input)
-
-
     if input==""
       return false
     end
-
-
-      input=input.downcase.split('')
+    input = input.downcase.split('')
       flag=true
-
-
-      ('a'..'z').each do |i|
-
+     ('a'..'z').each do |i|
           if flag==false
             flag=false
             break
           end
-
-          input.each do |j|
+            input.each do |j|
                 if i==j
                   flag=true
                   break
-
                 else
                   flag=false
                 end
-
-          end
+            end
       end
-
       if flag==true
-        return true
+        true
       else
-        return false
+        false
       end
   end
 end
